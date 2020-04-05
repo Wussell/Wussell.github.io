@@ -1,0 +1,9 @@
+TIL: 
+Sockets (Protocol?)
+Establishes connection between server and client and allocates a socket where the data is sent and received from. Connection is established using a set of defined functions (bind, accept, listen, etc.) 
+
+When sending and receiving data over a network computers use protocols (ie IP -> TCP -> HTTP) to interpret the data according to a widely understood standard.
+
+Data is sent in the form of discrete chunks of bytes called packets.
+
+Once a connection/socket is established, Go treats the data to be sent and received as a writer/reader.
