@@ -1,0 +1,18 @@
+<! DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset = “UTF-8”>
+		<title>4-22-20</title>
+	</head>
+	<body>
+		<h2>Work done today</h2>
+		<h4>git.add</h4>
+		<p>Got compression, reading and writing working. Reads/writes are stateful, so need to be flushed/reset to read from beginning again. Worked on index modification. Maps won't work, they don't stay when the program stops executing. Need to parse the index file directly.</p>
+        <h2>For later: </h2> 		
+        <p>Finish removing uses of maps in the add function. Check for alternative to closing/reopening files to read from, like seek in the io package. Make
+            sure that new compressed versions of files are added when they're different from
+            a previous version, and the index always points at the latest version. 
+            Modify add function to accept directories as an argument.
+        </p>
+	</body>
+</html>
