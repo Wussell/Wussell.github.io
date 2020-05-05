@@ -1,0 +1,16 @@
+<! DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset = “UTF-8”>
+		<title>5-5-20</title>
+	</head>
+	<body>
+        <h4>Huffman coding </h4>
+        <p>Messed around a lot in the Go playground. Worked on traversing ordered binary trees and storing the data in a slice. Thought I was being dumb because I couldn't figure out such a straightforward problem, even after I was given a hint to use the append function, but it turns out I needed to recursively pass the slice back into the append function, which I didn't know how to do because I didn't realize the "slice..." part of the documentation for the append function was actual syntax, so I didn't know how to append a slice to another slice. *deep breath* Anyway, it felt good to know I wasn't just mentally incapable of solving the problem. I also started trying to work through the math of the actual file compression, assuming a map of bit sequences to characters is given. I think its fairly straightforward, but it has a surprising number of components.
+        </p>
+        <h5>To do:</h5>
+        <p>Finish makeTree function. Finish makeTree function test. Write function to map each char to its path stored as a sequence of bits. Write compression function that reads each character from the file to be compressed and writes its corresponding bit sequence to a file, along with the header containing the compression tree and the pseudo-EOF character. Write decompression function that reads a compressed file and gives back an uncompressed file identical to the original. Write tests for all functions.</p>
+        <h5>exploration: </h5>
+        <p>Implement the binary tree traversal function using a loop and linked list instead of recursion. Write a function that creates an ordered binary tree given some numbers.</p>
+	</body>
+</html>
