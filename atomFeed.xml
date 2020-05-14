@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<feed xmlns="http://www.w3.org/2005/Atom">
 	
-	  <title>Example Feed</title>
-	  <link href="http://example.org/"/>
-	  <updated>2003-12-13T18:30:02Z</updated>
+	  <title>Ben</title>
+	  <link href="https://wussell.github.io/atomFeed.xml"/>
+	  <updated>2020-05-14 15:58:54.605067 -0400 EDT m=+0.001126929</updated>
 	  <author>
-		<name>John Doe</name>
+		<name>Ben Muthalaly</name>
 	  </author>
-	  <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6</id>
+	  <id>https://wussell.github.io</id>
 	
 	  <entry>
-		<title>Atom-Powered Robots Run Amok</title>
-		<link href="http://example.org/2003/12/13/atom03"/>
+		<title>4-4-20</title>
+		<link href="https://wussell.github.io/4_4_20.html"/>
 		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
-		<updated>2003-12-13T18:30:02Z</updated>
-		<summary>Some text.</summary>
+		<updated>2020-05-14 15:58:54.605067 -0400 EDT m=+0.001126929</updated>
 	  </entry>
 	
 	</feed>
