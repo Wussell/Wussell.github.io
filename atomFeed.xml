@@ -3,7 +3,7 @@
 	
 	  <title>Ben</title>
 	  <link href="https://wussell.github.io/atomFeed.xml"/>
-	  <updated>2020-05-14 15:58:54.605067 -0400 EDT m=+0.001126929</updated>
+	  <updated>2020-05-14T16:24:21-04:00</updated>
 	  <author>
 		<name>Ben Muthalaly</name>
 	  </author>
@@ -13,7 +13,7 @@
 		<title>4-4-20</title>
 		<link href="https://wussell.github.io/4_4_20.html"/>
 		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
-		<updated>2020-05-14 15:58:54.605067 -0400 EDT m=+0.001126929</updated>
+		<updated>2020-05-14T16:24:21-04:00</updated>
 	  </entry>
 	
 	</feed>
