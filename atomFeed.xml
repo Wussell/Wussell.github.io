@@ -63,5 +63,30 @@ Automate git commit and push. Implement different functionality for updating an 
 
 </content>
 	 </entry>
+	   
+		<entry>
+		<title>5-19-20test</title>
+		<link href="https://wussell.github.io/5_19_20test"/>
+		<id>https://wussell.github.io/5_19_20test</id>
+		<updated>2020-05-19T16:40:34-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+will line breaks ever work
+
+</p> 
+ <p>
+probably not. this is stupid
+
+</p> 
+<p> 
+maybe it isn't working because you can't update a post in netnewswire
+
+</p> 
+ <p>
+i hope not. that would be stupid</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
