@@ -42,17 +42,26 @@
 		<link href="https://wussell.github.io/5_18_20test"/>
 		<id>https://wussell.github.io/5_18_20test</id>
 		<updated>2020-05-19T16:18:13-04:00</updated>
-	  	<content><p>
+	  	<content>
+		  <![CDATA[
+<p>
 Atom feed
 
-</p>  <p>
+</p>  
+<p>
 Got command line input for the update function working with the scanln function in the fmt package. Learned a little about the Chomsky hierarchy and that you can't parse context free languages with regular expressions (?) while trying to investigate why stripping the tags from an html file was more difficult than I expected. Decided to change my approach from taking relevant parts out of the html file to creating an Atom entry and html file from a plain text file.
 
-</p> <p>
+</p> 
+<p>
 To do:
 
-</p>  <p>
-Automate git commit and push. Implement different functionality for updating an existing entry and for entirely new entries. Implement delete entry function. Add textual content of given file to entries.</p>  </content>
+</p>  
+<p>
+Automate git commit and push. Implement different functionality for updating an existing entry and for entirely new entries. Implement delete entry function. Add textual content of given file to entries.
+</p>  
+]]>
+
+</content>
 	 </entry>
 	  
 	</feed>
