@@ -113,5 +113,30 @@ Maybe reset the feed and build it back from the beginning so every post in the f
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>5-20-20</title>
+		<link href="https://wussell.github.io/5_20_20"/>
+		<id>https://wussell.github.io/5_20_20</id>
+		<updated>2020-05-20T17:02:07-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+Huffman coding:
+
+</p> 
+ <p>
+Finally got the bit sequence table working, with a lot of help. I don't think I would have been able to come up with the function I ended up using by myself. It would probably help to go through it again a few times to solidify the details. Now I'm working on the actual compressing of the file. It's fairly straightforward, but I do need to get a lot more comfortable with how Go stores and displays values, especially numbers in various bases. Hopefully I can finish the file compression tomorrow, and the decompression soon after.
+
+</p> 
+<p>
+to do: 
+
+</p> 
+ <p>
+File compression (including header and pseudo-eof), decompression, and testing.</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>

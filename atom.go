@@ -27,11 +27,11 @@ func textSplitter(fileName string) [][]string {
 	file := make([]byte, length)
 	_, err = f.Read(file)
 	text := string(file)
-	topicSplit := strings.Split(text, "topic")
+	topicSplit := strings.Split(text, "<topic>")
 	topicSplit = topicSplit[1:]
 	splitText := make([][]string, len(topicSplit))
 	for i, topic := range topicSplit {
-		splitText[i] = strings.Split(topic, "body")
+		splitText[i] = strings.Split(topic, "<body>")
 	}
 	return splitText
 }
