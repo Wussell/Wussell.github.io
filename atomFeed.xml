@@ -163,5 +163,30 @@ Finish compression function by figuring out how to generate pseudo-eof character
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>6-4-20</title>
+		<link href="https://wussell.github.io/6_4_20"/>
+		<id>https://wussell.github.io/6_4_20</id>
+		<updated>2020-06-04T17:33:07-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+Huffman coding: 
+
+</p> 
+ <p>
+Finished decompression a few days ago, but it decompressed into gibberish, so I've been working on testing. All the random tests I threw at the tree functions (creation, compression, decompression) seemed to pass just fine, so I thought the problem had to be with the function that parsed the compressed data. However, a more granular inspection revealed the output was different every time, and an even closer inspection revealed the tree was different every time, specifically which node each character was assigned to. I think the only source of that non-determinism is when I use a map to assign the character to a node, but I don't think that's what's causing the incorrect output. I might still try to find a way around that non-determinism just so debugging is easier, but I'm not sure.
+
+</p> 
+<p>
+to do:
+
+</p> 
+ <p>
+More testing.  </p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
