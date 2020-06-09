@@ -188,5 +188,30 @@ More testing.  </p>
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>6-9-20</title>
+		<link href="https://wussell.github.io/6_9_20"/>
+		<id>https://wussell.github.io/6_9_20</id>
+		<updated>2020-06-09T17:50:12-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+Huffman coding
+
+</p> 
+ <p>
+Finally finished it, I think. I figured out the function where the problem ended up being five days ago after doing the initial testing. It took me this long to fix it mostly due to a lack of focus and/or a lack of a systematic/logical thought process. I only needed to trace what the loop in the 'unhuff' function was doing to see that it was a problem with the location of some local variable declarations. After moving 3 lines of code around, the uncompressed data turned from gibberish into a perfect recreation of the original document. This was another point in favor of testing functions as I go, or at least moderately complex functions. Another thing that would be nice to take from this project is an improved naming convention. It might be beneficial to read through the pertinent sections of A Philosophy of Software Design and Elements of Closure again before going through and renaming the variables and functions and adding some documentation.
+
+</p> 
+<p>
+Myers Diff
+
+</p> 
+ <p>
+Not sure if I'm doing this next or not, but I started to try to build some intuition for how the algorithm works. Seems pretty cool, and I don't know much about graph theory or whatever so this seems like a nice place to start.</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
