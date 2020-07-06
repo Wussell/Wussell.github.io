@@ -213,5 +213,22 @@ Not sure if I'm doing this next or not, but I started to try to build some intui
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>7-6-20</title>
+		<link href="https://wussell.github.io/7_6_20"/>
+		<id>https://wussell.github.io/7_6_20</id>
+		<updated>2020-07-06T16:54:01-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+photo sharing app
+
+</p> 
+ <p>
+Perused the Wikipedia page for database normalization. It seems fairly straightforward and worth keeping in mind. So far, the basic design of the "app" consists of 3 main tables: users, albums, and photos, along with a table listing which users have permission to view each album. The album is the only organizational unit, so each user has one by default and all photos go into an album. I've only just started implementing the design into go, but so far I can't foresee any major complications.</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
