@@ -230,5 +230,30 @@ Perused the Wikipedia page for database normalization. It seems fairly straightf
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>7-7-20</title>
+		<link href="https://wussell.github.io/7_7_20"/>
+		<id>https://wussell.github.io/7_7_20</id>
+		<updated>2020-07-07T17:20:35-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+photo app
+
+</p> 
+ <p>
+Started developing the permission system. Have a couple bugs to work out.
+
+</p> 
+<p>
+to-do
+
+</p> 
+ <p>
+Fix permission bugs. Work on test suite. Add function to remove/change permissions. Should photos be exclusive to one album? Should all photos go in a user's main album and then be duplicated in other albums? Should every album be a separate table?</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
