@@ -255,5 +255,30 @@ Fix permission bugs. Work on test suite. Add function to remove/change permissio
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>7-8-20</title>
+		<link href="https://wussell.github.io/7_8_20"/>
+		<id>https://wussell.github.io/7_8_20</id>
+		<updated>2020-07-08T17:16:15-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+photo app
+
+</p> 
+ <p>
+Fixed the bug with the permission check. When I was trying to scan the rows into a slice, I wasn't using a pointer to the slice. Wrote a quick test for the permission check and got it to pass. The photos function is now working as intended. 
+
+</p> 
+<p>
+to-do
+
+</p> 
+ <p>
+Expand test suite. Add function to remove/change permissions. Should photos be exclusive to one album? Should all photos go in a user's main album and then be duplicated in other albums? Should every album be a separate table?</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
