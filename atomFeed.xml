@@ -297,5 +297,23 @@ Started implementing the diff algorithm. Made a function that breaks a string in
  ]]>
 	</content>
 	 </entry>
+	   
+		<entry>
+		<title>7-18-20</title>
+		<link href="https://wussell.github.io/7_18_20"/>
+		<id>https://wussell.github.io/7_18_20</id>
+		<updated>2020-07-20T15:42:22-04:00</updated>
+		  <content>
+		  <![CDATA[
+		  <p>
+Myers diff
+
+</p> 
+ <p>
+Fixed the indexing bug in the shortestEdit function by remapping negative k values relative to the end of the slice to mimic Ruby. I had thought of remapping before, but I was trying to come up with a more clever solution than calling a mapping function before every slice reference. Now that that's fixed, the function still isn't doing what I thought it should, but then again I'm not sure that I understand what it's supposed to do. Something fundamental I just learned about Go functions (and I'm guessing many other languages): every control flow path needs to have a return statement, which is a requirement I usually fulfill by only using return at the end of the function. 
+</p> 
+ ]]>
+	</content>
+	 </entry>
 	  
 	</feed>
