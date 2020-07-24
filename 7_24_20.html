@@ -1,0 +1,17 @@
+<! DOCTYPE HTML>
+	<html>
+		<head>
+			<meta charset = “UTF-8”>
+			<title>7-24-20</title>
+		</head>
+		<body>
+		<h4>
+Myers diff
+
+</h4> 
+ <p> 
+ 
+Fixed a bug where every element of the trace slice was updating to match the latest value of the v slice. I had forgotten the implications of the fact that a slice is a pointer to an underlying array, so if you change an element of a slice, that element is changed everywhere that slice's array is referenced. I've essentially finished the basic version of the diff code. The next thing to do if I want to make this more usable (besides small convenient improvements) is implement the linear space version of the algorithm that Git actually uses. 
+ </p>
+ </body> 
+ </html>
