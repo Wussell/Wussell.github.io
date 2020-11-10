@@ -1,0 +1,61 @@
+<! DOCTYPE HTML>
+	<html>
+		<head>
+			<meta charset = “UTF-8”>
+			<title>11-10-20</title>
+		</head>
+		<body>
+		<h4>
+Photo app
+
+</h4> 
+ <p> 
+ 
+This past week, I've had some troubles with the database consistently locking when trying to upload a file. I've now fixed the problem, so I'm going to try to explain some things that might have been useful to know a week ago.
+
+ 
+ </p>
+ <h4>
+The bug
+
+</h4> 
+ <p> 
+ 
+Two of my HTTP handler functions read from the database, and one (which handles uploading photos) writes. During normal navigation of the website, I might do the two reads (SELECT statements) and then the write (an INSERT statement). Attempting to write would always return a "database is locked" error. I tried to fix it by adding mutex locks around each database query or execution, but the bug persisted. This led me to believe the issue was either with my understanding of SQLite or the SQLite driver I was using. To find out, I read about how SQLite 3 handles file locking and concurrency. 
+
+ 
+ </p>
+ <h4>
+Transactions
+
+</h4> 
+ <p> 
+ 
+During normal operation, SQLite protects a database file by locking it. A database file can be locked in one of five states, based on what actions are being attempted by the processes with access to the file. For example, if a process wants to write to a database, the database file locks in a PENDING state (stopping all incoming read and write attempts) and waits until all other processes have relinquished read access, at which point it can make the changes to the file, and commit them. To commit, the file locks so that no other process can read or write to it, writes the file to disk, and drops the locks, allowing other processes to read again.
+
+By default, SQLite automatically commits as soon as all operations associated with the database connection complete. Transactions can be used to get more specific control of when commits are made. After a transaction has begun, autocommitting is stopped and SQLite tries to postpone writing (and therefore blocking read access) as much as possible. The "COMMIT" command turns autocommitting back on and allows the write to disk to occur. If it fails due to another process holding a shared lock, it turns the autocommit back off to retry after the shared lock clears.
+
+ 
+ </p>
+ <h4>
+The fix
+
+</h4> 
+ <p> 
+ 
+The bug was fixed after adding transactions for every database query, at which point I could remove the mutex locks. It seemed to me that the database file was stuck with a PENDING lock on it because something had persistent read access even though all SELECT statements had ostensibly been completed. When the write was attempted, SQLite waited for all read access to be relinquished, which never happened, so it returned a "database is locked" error.
+While writing this post, I found that the lock was indeed being held by the result of a SELECT statment that I had forgotten to close. Closing the result also fixed the bug and the program behaved how I originally expected it would, even without the use of transactions.
+So even when the root cause of the problem (read access that wasn't relinquished) was still present, using transactions avoided the locking error by deferring any commits until something else forced the query result to close. 
+
+ 
+ </p>
+ <h4>
+Remaining questions
+
+</h4> 
+ <p> 
+ 
+Even with this explanation of how transactions fixed the problem, I still have some uncertainty. After implementing transactions, my understanding is the commit must be deferred until the query result closed. However, after I uploaded a photo and wrote the entry to the database, the changes showed up immediately. It seems to me that something caused the result to close immediately and the commit to happen, or that changes to the database could be observed even before the commit happens. Neither of those possibilities fit with my current understanding of the program, so I think I'll have to do more testing or reading to learn more. 
+ </p>
+ </body> 
+ </html>
